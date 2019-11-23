@@ -7,7 +7,7 @@ THIS IS WILL NOT WORK ON WINDOWS!!!
 It's an installer that will automatically setup an osu! private server based off of Ryumi's source for those who want to save time or don't know how to make one themself.
 
 # How to use it?
-It's simple. Firstly, you need to download it by either downloading it from GitHub, or running this command to download: `wget https://raw.githubusercontent.com/osuryumi/ryumi-install-installer/master/install.sh`
+It's simple. Firstly, you need to download it by either downloading it from GitHub, or running this command to download: `wget https://raw.githubusercontent.com/osuryumi/ryumi-install-script/master/install.sh`
 
 After you do this, copy, paste and run the command: `chmod +x install.sh && ./install.sh`, and it will take you into the install process!
 
