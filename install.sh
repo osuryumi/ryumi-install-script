@@ -15,6 +15,9 @@ do
 printf "\nMain domain name: "
 read domain
 
+if [ "$domain" = "" ]; then
+	printf "\n\nYou need to specify the main domain. Example: cookiezi.pw"
+else
 	printf "\n\nFrontend: $domain"
 	printf "\nBancho: c.$domain"
 	printf "\nAvatar: a.$domain"
