@@ -24,7 +24,7 @@ else
 	printf "\nBackend: old.$domain"
 	printf "\n\nIs this configuration correct? [y/n]: "
 	read q
-        if [ "$q" = "y" ]; then
+	if [ "$q" = "y" ]; then
 		valid_domain=1
 	fi
 fi
@@ -58,8 +58,6 @@ mysql_usr=${mysql_usr:=root}
 printf "\nPassword [meme]: "
 read mysql_psw
 mysql_psw=${mysql_psw:=meme}
-
-printf "\n\nAlright! Let's see what I can do here...\n\n"
 
 # Configuration is done.
 # Start installing/downloading/setup
