@@ -1,8 +1,6 @@
 #!/bin/bash
 clear
 
-server-install () {
-
 printf "\nInstall directory "[$(pwd)"/ripple"]": "
 read MasterDir
 MasterDir=${MasterDir:=$(pwd)"/ripple"}
@@ -206,5 +204,3 @@ DIFF=$(( $END - $START ))
 nginx
 echo "Server setup in $DIFF seconds!"
 echo "PHPMyAdmin can be accessed here: http://old.$domain/phpmyadmin"
-
-}
