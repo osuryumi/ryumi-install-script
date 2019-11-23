@@ -212,5 +212,3 @@ echo "Server setup in $DIFF seconds!"
 echo "PHPMyAdmin can be accessed here: http://old.$domain/phpmyadmin"
 
 }
-
-echo "Exiting!"
