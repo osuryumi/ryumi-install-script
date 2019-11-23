@@ -1,6 +1,3 @@
-#!/bin/bash
-clear
-
 printf "\nInstall directory "[$(pwd)"/ripple"]": "
 read MasterDir
 MasterDir=${MasterDir:=$(pwd)"/ripple"}
