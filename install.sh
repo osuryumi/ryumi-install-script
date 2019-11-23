@@ -1,8 +1,17 @@
+#!/bin/bash
+clear
+
+server-install () {
+
+valid_domain=0
+
 printf "\nInstall directory "[$(pwd)"/ripple"]": "
 read MasterDir
 MasterDir=${MasterDir:=$(pwd)"/ripple"}
 
 printf "\n\n..:: NGINX CONFIGS ::.."
+while [ $valid_domain -eq 0 ]
+do
 printf "\nMain domain name: "
 read domain
 
@@ -15,7 +24,8 @@ else
 	printf "\nBackend: old.$domain"
 	printf "\n\nIs this configuration correct? [y/n]: "
 	read q
-	if [ "$q" = "y" ];
+        if [ "$q" = "y" ]; then
+		valid_domain=1
 	fi
 fi
 done
@@ -201,3 +211,5 @@ DIFF=$(( $END - $START ))
 nginx
 echo "Server setup in $DIFF seconds!"
 echo "PHPMyAdmin can be accessed here: http://old.$domain/phpmyadmin"
+
+}
