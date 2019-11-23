@@ -96,13 +96,13 @@ systemctl restart php7.0-fpm
 pkill -f nginx
 cd /etc/nginx/
 rm -rf nginx.conf
-wget -O nginx.conf https://pastebin.com/raw/9aduuq4e 
+wget -O nginx.conf https://github.com/osuryumi/tools/raw/master/etcnginx.conf
 sed -i 's#include /root/ripple/nginx/*.conf\*#include '$MasterDir'/nginx/*.conf#' /etc/nginx/nginx.conf
 cd $MasterDir
 cd nginx
-wget -O nginx.conf https://pastebin.com/raw/KHk9Zyfh
+wget -O nginx.conf https://github.com/osuryumi/tools/raw/master/nginx.conf 
 sed -i 's#DOMAIN#'$domain'#g; s#DIRECTORY#'$MasterDir'#g; s#6969#'$hanayo_port'#g' nginx.conf
-wget -O old-frontend.conf https://pastebin.com/raw/TzZjRRMx
+wget -O old-frontend.conf https://github.com/osuryumi/tools/raw/master/old-frontend.conf
 sed -i 's#DOMAIN#'$domain'#g; s#DIRECTORY#'$MasterDir'#g; s#6969#'$hanayo_port'#g' old-frontend.conf
 wget -O cert.pem https://github.com/osuthailand/ainu-certificate/raw/master/cert.pem
 wget -O key.pem https://github.com/osuthailand/ainu-certificate/raw/master/key.key
