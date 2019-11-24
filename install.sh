@@ -203,12 +203,21 @@ echo "Avatar Server setup is done!"
 echo "Changing folder and files permissions"
 chmod -R 777 /root/ripple
 
-END=$(date +%s)
-DIFF=$(( $END - $START ))
-
 nginx
 echo "Server setup in $DIFF seconds!"
 echo "PHPMyAdmin can be accessed here: http://old.$domain/phpmyadmin"
 
 }
-server-install()
+
+echo ""
+echo "IMPORTANT: Ripple is licensed under the GNU AGPL license. This means, if your server is public, that ANY modification made to the original ripple code MUST be publically available."
+echo "Also, to run an osu! private server, as well as any sort of server, you need to have minimum knowledge of command line, and programming."
+echo "Running this script assumes you know how to use Linux in command line, secure and manage a server, and that you know how to fix errors, as they might happen while running that code."
+echo "Do you agree? (y/n)"
+read answer
+if [ "$answer" != "${answer#[Yy]}" ] ;then
+    echo Continuing
+    server-install
+else
+    echo Exiting
+fi
